@@ -1,0 +1,92 @@
+.gridStyle {
+    display: grid;
+    grid-template-rows: 180px 180px 180px 180px;
+    grid-template-columns: 140px 140px 140px 140px 140px;
+    grid-gap: 10px;
+    width:740px;
+    margin: 30px auto;
+}
+
+.container {
+    width: 140px;
+    height: 180px;
+    perspective: 600px;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform .5s ease;
+    transform-style: preserve-3d;
+}
+
+.back {
+    position: absolute;
+    /* width: 140px;
+    height: 180px; */
+    width: 100%;
+    height: 100%;
+    background: #eee;
+    border-radius: 8px;
+    border: 1px solid #333;
+    font-size: 10;
+    cursor: pointer;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    /* -webkit-transform: rotateY(180deg); */
+}
+
+.front {
+    position: absolute;
+    /* width: 140px;
+    height: 180px; */
+    width: 100%;
+    height: 100%;
+    background: #eee;
+    font-size: 10;
+    border-radius: 8px;
+    border: 1px solid #333;
+    cursor: pointer;
+    backface-visibility: hidden;
+    /* transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg); */
+    /* transition: all .5s ease; */
+    /* transform-style: preserve-3d; */
+}
+
+input {
+    position: absolute;
+    display:none;
+    width: 100%;
+    height: 100%;
+}
+
+.card:hover > .front {
+    background: #bbb;
+}
+
+/* .card:active{
+    background: #999;
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+} */
+checkbox:checked + .card {
+    transform: rotateY(180deg);
+}
+
+.container:hover checkbox:checked + .card {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateX(160deg);
+
+}
+
+
+/* .card > .back:hover {
+    background: #ccc;
+}
+
+.card > .back:active {
+    background: #999;
+    transform: perspective(600px) rotateY(-180deg);
+} */

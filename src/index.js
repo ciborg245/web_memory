@@ -52,14 +52,17 @@ class Board extends React.Component{
 
 
 	render(){
+		const animationStyle = {
+			transform: 'rotateY(180deg)'
+		}
 		return (
 			<div className = "gridStyle">
 				{
 					this.state.board.map((el, index)=>{
 						return (
 							<div className="container">
-								<input type="checkbox"/>
-								<div className="card">
+								// <input type="checkbox"/>
+								<div className={`card ${this.state.selected != null ? "is-flipped" : ""}`}>
 									<div
 										key={index}
 										className="front"

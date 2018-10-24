@@ -11,7 +11,6 @@ class Board extends React.Component{
 			board: null,
 			cols: 5,
 			rows: 4,
-
 		}
 
 		this.randomizeGrid();
@@ -61,7 +60,6 @@ class Board extends React.Component{
 					this.state.board.map((el, index)=>{
 						return (
 							<div className="container">
-								// <input type="checkbox"/>
 								<div className={`card ${this.state.selected != null ? "is-flipped" : ""}`}>
 									<div
 										key={index}

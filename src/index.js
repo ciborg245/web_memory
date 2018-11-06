@@ -23,7 +23,8 @@ class Board extends React.Component{
 			cardsState: Array(16).fill('card'),
 			refresh: true,
 			images: [Card1, Card2, Card3, Card4, Card5, Card6, Card7, Card8],
-			ranImgs: Array(16).fill(null)
+			ranImgs: Array(16).fill(null),
+			cont: 0
 		}
 
 		this.randomizeGrid();
@@ -40,7 +41,6 @@ class Board extends React.Component{
 			this.state.ranImgs[i] = (this.state.images[Math.floor(numbers[randomPos]/2)]);
 			numbers.splice(randomPos,1);
 		}
-		// console.log(this.state.ranImgs);
 		this.state.board = newGrid;
 	}
 
@@ -56,6 +56,10 @@ class Board extends React.Component{
 			setTimeout(() => {
 				if (this.state.board[index] == this.state.board[this.state.selected]) {
 					console.log("you win");
+					this.state.cont++;
+					if (this.state.cont == 8) {
+						alert("You win.");
+					}
 				} else {
 					this.state.cardsState[this.state.selected] = 'card';
 					this.state.cardsState[index] = 'card';

@@ -1,19 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .mainDiv {
+    top: 0%;
+    left: 0%;
     background-image: url('/img/bg1.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height:100%;
+    height: 100%;
     z-index: -1;
 }
 
 .header {
     text-align: center;
-    position: fixed;
+    position: relative;
     background-color: #6596ef;
     top: 0;
     left: 0;
-    height: 10%;
+    height: 50px;
     width: 100%;
     -moz-border-radius: 0px 0px 10px 10px;
     -webkit-border-radius: 0px 0px 10px 10px;
@@ -21,23 +28,24 @@
 }
 
 .title {
+    position: relative;
 	text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.15);
 	color: #444;
 	font-size: 1.3em;
-    margin-top: 1em;
+    top: 15px;
 }
 
 .gridStyle {
-    position: absolute;
+    position: relative;
     top: 10%;
     left: 50%;
     display: grid;
     grid-template-rows: 180px 180px 180px 180px;
     grid-template-columns: 140px 140px 140px 140px;
     grid-gap: 10px;
-    /* width:740px; */
-    margin: 30px auto;
-    margin-left: -295px;
+    width: 590px;
+    margin: 30px 30px 30px -295px;
+    /* margin-left: -295px; */
 }
 
 .container {
@@ -45,8 +53,6 @@
     height: 180px;
     perspective: 600px;
     position: relative;
-    /* transform: translate(-50%, -50%);
-    transform-style: preserve-3d; */
 }
 
 .card {
@@ -59,79 +65,34 @@
 
 .back {
     position: absolute;
-    /* width: 140px;
-    height: 180px; */
     width: 100%;
     height: 100%;
-    /* background: #eee; */
     border-radius: 8px;
     border: 1px solid #333;
     font-size: 10;
     cursor: pointer;
     backface-visibility: hidden;
     transform: rotateY(180deg);
-    /* transition: all 3s; */
-    /* -webkit-transform: rotateY(180deg); */
 }
 
 .front {
     position: absolute;
-    /* width: 140px;
-    height: 180px; */
     width: 100%;
     height: 100%;
-    /* background: #eee; */
     background-image: url("/img/logo.png");
     background-position: center;
     background-size: cover;
-    /* background-repeat: no-repeat; */
     font-size: 10;
     border-radius: 8px;
     border: 1px solid #333;
     cursor: pointer;
     backface-visibility: hidden;
-    /* transform: rotateY(0deg);
-    -webkit-transform: rotateY(0deg); */
-    /* transition: all .5s ease; */
-    /* transform-style: preserve-3d; */
 }
-
-/* input {
-    position: absolute;
-    display:none;
-    width: 100%;
-    height: 100%;
-} */
 
 .card:hover > .front {
     opacity: 0.5;
 }
 
-/* .card:active{
-    background: #999;
-    transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg);
-} */
-
 .is-flipped {
   transform: rotateY(180deg);
 }
-/* checkbox:checked + .card {
-    transform: rotateY(180deg);
-}
-
-.container:hover checkbox:checked + .card {
-    transform: rotateY(180deg);
-    -webkit-transform: rotateX(160deg);
-
-} */
-
-
-/* .card > .back:hover {
-    background: #ccc;
-}
-
-.card > .back:active {
-    background: #999;
-    transform: perspective(600px) rotateY(-180deg);
-} */

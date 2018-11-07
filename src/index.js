@@ -92,8 +92,6 @@ class Board extends React.Component{
 										key={index}
 										className="front"
 										onClick = {this.handleClick.bind(this, index)}>
-
-										{this.state.board[index]}
 									</div>
 									<div
 										style = {{backgroundImage: 'url(' +this.state.ranImgs[index]+ ')',

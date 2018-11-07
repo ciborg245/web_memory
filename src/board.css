@@ -1,23 +1,27 @@
-body {
+html, body {
     margin: 0;
     padding: 0;
+    height: 100%;
+}
+
+#root {
+    height:100%;
 }
 
 .mainDiv {
     top: 0%;
     left: 0%;
-    background-image: url('/img/bg1.png');
+    background-image: url('/img/bg.jpg') ;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 100%;
-    z-index: -1;
 }
 
 .header {
     text-align: center;
     position: relative;
-    background-color: #6596ef;
+    background-color: #C4C8D8;
     top: 0;
     left: 0;
     height: 50px;
@@ -32,12 +36,11 @@ body {
 	text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.15);
 	color: #444;
 	font-size: 1.3em;
-    top: 15px;
+    top: 10px;
 }
 
 .gridStyle {
     position: relative;
-    top: 10%;
     left: 50%;
     display: grid;
     grid-template-rows: 180px 180px 180px 180px;
@@ -45,7 +48,6 @@ body {
     grid-gap: 10px;
     width: 590px;
     margin: 30px 30px 30px -295px;
-    /* margin-left: -295px; */
 }
 
 .container {
@@ -90,7 +92,7 @@ body {
 }
 
 .card:hover > .front {
-    opacity: 0.5;
+    opacity: 0.75;
 }
 
 .is-flipped {
